@@ -7,7 +7,7 @@ To create a new presentation from this template (modified from https://help.gith
 
 1. create new github repo: new-repo
 
-2. go to appropriate filesystem location on command line (where you want new presentation to live)
+2. go to some appropriate filesystem location on command line
 
 3. then:
 ```
@@ -17,3 +17,7 @@ $ git push --mirror https://github.com/YOURUSERNAME/new-repo.git # Mirror-push t
 $ cd ..
 $ rm -rf beamer-stub.git # Remove temporary local repo
 ```
+
+4. This will not immediately create a local repo.  If using github gui, you should now be able to refresh your github repos, and see the new one.  Clone it to local as normal.
+
+5. If using Git + TeXlipse Eclipse plugins, you can now "Import -> Git -> Projects from Repository -> Local", add the new local repo, and then select it as the project source.
