@@ -21,3 +21,9 @@ $ rm -rf beamer-stub.git # Remove temporary local repo
 4. This will not immediately create a local repo.  If using github gui, you should now be able to refresh your github repos, and see the new one.  Clone it to local as normal.
 
 5. If using Git + TeXlipse Eclipse plugins, you can now "Import -> Git -> Projects from Repository -> Local", add the new local repo, and then select it as the project source.
+
+===============
+
+LICENSE
+
+http://creativecommons.org/licenses/by-nc-sa/3.0/

@@ -12,10 +12,13 @@
 \newcommand{\tEt}{\tE{\tau}}
 
 \newcommand{\bskip}{\\~\\}
+
+\author[Pearson]{Carl~A.~B.~Pearson}
+
 \begin{document}
 \SweaveOpts{concordance=TRUE}
 \title{A TEMPLATE}
-\author[Pearson]{Carl~A.~B.~Pearson}
+
 \institute[University of Florida]{
 Emerging Pathogens Institute, University of Florida
 }
