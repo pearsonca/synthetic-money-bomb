@@ -326,7 +326,7 @@ PlotStacker(Edelta)
 \frametitle{USING COLUMNS EXAMPLE}
 \begin{columns}[t]
 \begin{column}{0.3\textwidth}
-TEXT LEFT, FIG RIGHT
+TEXT LEFT, FIG RIGHT\cite{someref}
 \end{column}
 \begin{column}{0.7\textwidth}
 \begin{figure}
@@ -338,6 +338,13 @@ TEXT LEFT, FIG RIGHT
 
 \end{columns}
 % notes-notes-notes
+}
+
+\frame{
+\frametitle{BIBLIOGRAPHY EXAMPLE (CITE ON PREV SLIDE)}
+\footnotesize
+\bibliography{biblio}{}
+\bibliographystyle{plain}
 }
 
 \end{document}
