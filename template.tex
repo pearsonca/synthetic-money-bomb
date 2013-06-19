@@ -1,4 +1,4 @@
-\documentclass{beamer}\usetheme{boxes}
+\documentclass{article}
 
 \usepackage{amsmath,hyperref}
 
@@ -11,42 +11,32 @@
 \newcommand{\tE}[1]{\ensuremath{{\tilde{E}(#1)}}}
 \newcommand{\tEt}{\tE{\tau}}
 
-\newcommand{\bskip}{\\~\\}
-
-\author[Pearson]{Carl~A.~B.~Pearson}
+\author{Carl~A.~B.~Pearson}
 
 \usepackage{Sweave}
 \begin{document}
 \input{template-concordance}
 \title{A TEMPLATE}
 
-\institute[University of Florida]{
-Emerging Pathogens Institute, University of Florida
-}
-\frame{\titlepage}
+%\institute{Emerging Pathogens Institute, University of Florida}
+\titlepage
 
-\frame{
-\frametitle{A SIMPLE LIST OF POINTS}
+\section{A SIMPLE LIST OF POINTS}
 \begin{itemize}
 \item point one,
 \item two,
 \item see
 \end{itemize}
-% notes-notes-notes
-}
 
-\frame{
-\frametitle{INSERTING AN R-GENERATED FIGURE}
+\section{INSERTING AN R-GENERATED FIGURE}
 \begin{figure}
 \begin{center}
 \includegraphics{template-plotfig1}
 \end{center}
 \end{figure}
 % notes-notes-notes
-}
 
-\frame{
-\frametitle{INSERT ANOTHER PDF}
+\section{INSERT ANOTHER PDF}
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{insert.pdf}
@@ -54,31 +44,13 @@ Emerging Pathogens Institute, University of Florida
 \end{center}
 \end{figure}
 % this is a not uncommon measurement of a seasonally varying vector population.
-}
 
-\frame{
-\frametitle{SHOW SOME MATH}
+\section{SHOW SOME MATH}
 $$
 M(t) = C\sin(\omega t+\theta)
 $$
-}
 
-% plotfig1
-\usebackgroundtemplate{\includegraphics[width=0.9\paperheight,height=0.9\paperheight]{template-plotfig1.pdf}}
-\frame{
-\frametitle{USE PREVIOUSLY GENERATING THING AS BACKGROUND}
-\begin{itemize}
-\item with
-\item some
-\item text
-\item over it
-\end{itemize}
-}
-\usebackgroundtemplate{}
-
-
-\frame{
-\frametitle{SEVERAL EQUATIONS}
+\section{SEVERAL EQUATIONS}
 \begin{align*}
 E(t) &= \begin{cases}
         \dfrac{\Mp}{\Dt} & t \in \Dt \\
@@ -91,61 +63,34 @@ E(\rho, t) &= \begin{cases}
         \end{cases}\tag{Modified Step} \\
 E(t) &= \dfrac{2\Mp}{\Dt}\sqrt{\dfrac{2}{\pi}}e^{-\dfrac{8t^2}{\Dt^2}}\tag{Approximate $\delta$}
 \end{align*}
-}
 
 % DEFINE LOTS OF R...
 
 % THEN USE IT SEVERAL TIMES
-\frame{
-\frametitle{Modified Step (Trapezoid)}
+\section{THINGS}
+\subsection{Modified Step (Trapezoid)}
 \begin{figure}
 \begin{center}
 \includegraphics{template-pstrap}
 \end{center}
 \end{figure}
-}
 
-\frame{
-\frametitle{Modified Step (Triangle)}
+\subsection{Modified Step (Triangle)}
 \begin{figure}
 \begin{center}
 \includegraphics{template-pstri}
 \end{center}
 \end{figure}
-}
 
-\frame{
-\frametitle{Approx. $\delta$}
+\subsection{Approx. $\delta$}
 \begin{figure}
 \begin{center}
 \includegraphics{template-psdel}
 \end{center}
 \end{figure}
-}
 
-\frame{
-\frametitle{USING COLUMNS EXAMPLE}
-\begin{columns}[t]
-\begin{column}{0.3\textwidth}
-TEXT LEFT, FIG RIGHT\cite{someref}
-\end{column}
-\begin{column}{0.7\textwidth}
-\begin{figure}
-\begin{center}
-\includegraphics[width=1.1\textwidth]{justone.pdf}
-\end{center}
-\end{figure}
-\end{column}
-
-\end{columns}
-% notes-notes-notes
-}
-
-\frame{
-\frametitle{BIBLIOGRAPHY EXAMPLE (CITE ON PREV SLIDE)}
-\footnotesize
+\section{BIBLIOGRAPHY EXAMPLE (CITE ON PREV SLIDE)}
 \bibliography{biblio}{}
 \bibliographystyle{plain}
-}
 
 \end{document}
