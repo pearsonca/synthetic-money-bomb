@@ -1,4 +1,4 @@
-beamer-stub
+pub-stub
 ==============
 
 Scratch template For Rweave + LaTeX publications.
