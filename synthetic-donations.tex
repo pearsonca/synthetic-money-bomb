@@ -36,13 +36,56 @@ First-order model:
 \item people have a single candidate preference
 \item the target measurement is same-candidate donation, between-person lag time in days
 \item people donate only in response to events
+\item people have a fixed total donation to a particular candidate
 \item events come in several flavors:\begin{description}
-  \item[background] events which are organization independent - {\em e.g.} revelations in news media.  These have two flavors, favorable for candidate A and unfavorable for B, and {\em vice versa}.
+  \item[background] events which are organization independent - {\em e.g.} revelations in news media, campaign cold-calling pushes.  These have two flavors, favorable for candidate A and unfavorable for B, and {\em vice versa}.
+  \item[candidate] events which represent a candidate visiting a region, having one organization-independent event, then multiple organization-associated events in series
+  \item[organization] events which represent a particular organization having a event for a particular candidate
 \end{description}
 \end{enumerate}
 
 \subsection{Pseudo-code}
+\begin{verbatim}
+object Individual
+  belongs to Organization
+  has Organization affinity parameter
+  prefers a Candidate
+  has Candidate affinity parameter
+  has propensity to give
+  has given an amount this cycle
+  
+object Organization
+  prefers a Candidate
+  has a particular distribution for generating Organization Events
+  
+object Candidate
+  has a particular distribution for generating Candidate Events
+  
+object Background
+  has a particular distribution for generating Background Events
+\end{verbatim}
 
+run loop:
+
+\begin{verbatim}
+for (t=1; t < two years; t = t+1)
+  if (doBackgroundEvent(t))
+    event = createABackgroundEvent
+    for (person in people) if person.caresAbout(event)
+      person.donate
+  endif
+  daysOfCandidateEvents = doCandidateEvent(t)
+  if (daysOfCandidateEvents != 0)
+    // create a list of events, one non-organization, the rest organization-based
+    // which gets consumed as time goes on
+    // not sure on logic for this yet
+  else if (doOrganizationEvent(t))
+    event = createOrganizationEvent
+    for (person in event.organization) if person.caresAbout(event)
+      person.donate
+  endif
+endfor
+\end{verbatim}
 
 
 % \section{A SIMPLE LIST OF POINTS}
